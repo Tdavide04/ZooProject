@@ -34,7 +34,18 @@ class TestZoo(TestCase):
 
 
     def test_3(self):
-        pass
+        animal_2: Animal = Animal(name="Pluto", species="Canide", age=5, height=30.0, width=1.0, preferred_habitat="savana")
+        self.zookeeper_1.add_animal(animal_2, self.fence_1)
+
+        h = animal_2.height
+        w = animal_2.width
+        self.zookeeper_1.feed(animal_2)
+        result: bool =  animal_2.height != h and  animal_2.width != w
+        message: str = f"Error: the function feed doesn't work old.h: {h} old.w: {w} new.h: {animal_2.height} new.w: {animal_2.width}"
+
+        self.assertEqual(result, True, message)
+
+
 
 if __name__ == "__main__":
 
