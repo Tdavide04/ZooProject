@@ -128,9 +128,9 @@ class ZooKeepers:
         return fence.occupied_area() / fence.residual_area()
     
 class Zoo:
-    def __init__(self, fences: Fence, zoo_keepers: list):
-        self.fences = fences
-        self.zoo_keepers = zoo_keepers
+    def __init__(self):
+        self.fences = Fence
+        self.zoo_keepers = []
 
     def describe_zoo(self):
         print("Guardian:")
