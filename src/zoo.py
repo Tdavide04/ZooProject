@@ -129,8 +129,8 @@ class ZooKeepers:
     
 class Zoo:
     def __init__(self):
-        self.fences = Fence
-        self.zoo_keepers = []
+        self.fences: list[Fence] = []
+        self.zoo_keepers: list[ZooKeepers] = []
 
     def describe_zoo(self):
         print("Guardian:")
